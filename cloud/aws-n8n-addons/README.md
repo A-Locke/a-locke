@@ -45,25 +45,25 @@ This add-on project introduces AWS integrations that extend n8n's capabilities, 
 
 ## 📦 Deployment Guide
 
-### 1. [Set Up AWS CLI](./aws-cli-setup.md)
+### 1. [Set Up AWS CLI](./docs/aws-cli-setup.md)
 
 Ensure your credentials and region are configured.
 
 ---
 
-### 2. [Create IAM Role](./iam-role-setup.md)
+### 2. [Create IAM Role](./docs/iam-role-setup.md)
 
 Create a Lambda-compatible role with S3 and logging permissions.
 
 ---
 
-### 3. [Create S3 Bucket](./s3-bucket-setup.md)
+### 3. [Create S3 Bucket](./docs/s3-bucket-setup.md)
 
 Provision a secure, versioned bucket to store assets and workflow data.
 
 ---
 
-### 4. [Integrate AWS Lambda with n8n](./lambda-setup-guide.md)
+### 4. [Integrate AWS Lambda with n8n](./docs/lambda-setup-guide.md)
 
 Learn how to call Lambda from n8n or trigger workflows from Lambda using webhooks.
 
