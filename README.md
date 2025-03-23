@@ -17,6 +17,7 @@ Here, I apply theory to real-world scenarios, reflect on lessons learned, and bu
 | Skill / Topic                    | Project                                                                 |
 |----------------------------------|-------------------------------------------------------------------------|
 | AWS EC2 n8n                | [Deploy n8n to EC2 via Docker](./cloud/aws-n8n)                   |
+| AWS IAM, S3, Lambda | [AWS n8n Add-Ons Project](./cloud/aws-n8n-addons/README.md) |
 
 > 📝 *This table will expand as more projects are completed.*
 
