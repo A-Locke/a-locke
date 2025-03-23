@@ -83,7 +83,6 @@ This project helps reinforce topics from **AWS Certified Cloud Practitioner** an
 ## 🔭 Future Enhancements
 
 - Automate all setup via AWS CDK or Terraform
-- Add EventBridge triggers for Lambda automation
 - Build n8n nodes to directly read/write from S3
 - Scheduled Lambda functions to back up workflows
-- Integrate CloudWatch logs and alarms
+- Add Security Considerations section and outline best practices
