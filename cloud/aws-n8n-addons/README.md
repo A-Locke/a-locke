@@ -9,7 +9,7 @@ This project builds on top of the [`cloud/aws-n8n`](../aws-n8n/README.md) EC2 se
 Before starting, make sure:
 
 - You've deployed the EC2-based n8n instance from [`cloud/aws-n8n`](../aws-n8n/README.md)
-- [AWS CLI is installed and configured](./aws-cli-setup.md)
+- [AWS CLI is installed and configured](./docs/aws-cli-setup.md)
 - You have appropriate IAM permissions to create IAM roles, S3 buckets, and Lambda functions
 
 ---
