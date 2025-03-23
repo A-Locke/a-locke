@@ -17,11 +17,10 @@ This repo focuses on setting up the **infrastructure and service integrations**.
 Before starting, make sure you have:
 
 - An EC2 instance with **n8n running in Docker**
-  - (See: [Deploy n8n to EC2 Guide](#))
+  - (See: [Deploy n8n to EC2 Guide](../aws-n8n/README.md))
 - AWS CLI installed (locally or on the EC2 instance)
 - An [AWS account](https://aws.amazon.com/)
 - A [Google Cloud Platform (GCP)](https://console.cloud.google.com/) project
-- A domain name (optional, but useful for n8n access)
 
 ---
 
