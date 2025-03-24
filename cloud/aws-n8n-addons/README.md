@@ -7,7 +7,7 @@ This project demonstrates how to securely integrate `n8n` (running in Docker on 
 
 ## 🧾 Project Overview
 
-This repository guides you through:
+This module guides you through:
 - Setting up IAM roles for EC2 to securely interact with AWS
 - Creating a test Lambda function
 - Setting up a secure S3 bucket
