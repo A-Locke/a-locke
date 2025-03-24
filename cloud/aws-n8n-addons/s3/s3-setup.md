@@ -1,5 +1,5 @@
 
-# 🪣 Creating and Securing an S3 Bucket for n8n (EC2 IAM Role)
+# 🚀 Creating and Securing an S3 Bucket for n8n (EC2 IAM Role)
 
 This guide walks you through creating an S3 bucket using the AWS web interface and configuring it for use with `n8n` running on EC2 using an IAM role.
 
