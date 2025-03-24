@@ -9,6 +9,7 @@ This project demonstrates how to securely integrate `n8n` (running in Docker on 
 
 This module guides you through:
 - Setting up IAM roles for EC2 to securely interact with AWS
+- Setting up IAM user in case of experiencing issues with roles
 - Creating a test Lambda function
 - Setting up a secure S3 bucket
 - Building an `n8n` workflow to tie everything together
@@ -43,8 +44,9 @@ The goal is to securely execute AWS workflows from within `n8n` without storing 
 
 Follow the guides in the folders listed below to recreate the full setup:
 
-1. 🔐 **Configure IAM Role for EC2**
+1. 🔐 **Configure IAM Role for EC2 or IAM User**
    - 📄 [`IAM/iam-role-setup.md`](IAM/iam-role-setup.md)
+   - 📄 [`IAM/iam-user-setup.md`](IAM/iam-user-setup.md)
 
 2. 🧪 **Create a Lambda Test Function**
    - 📄 [`lambda/lambda-function-guide.md`](lambda/lambda-function-guide.md)
