@@ -69,7 +69,7 @@ You can use an **IF node** in n8n to validate headers or IPs.
 
 ---
 
-## 🪣 Step 4: Add an S3 Node
+## 📄 Step 4: Add an S3 Node
 
 1. Add an **Amazon S3** node
 2. Operation: `Upload`
@@ -78,7 +78,7 @@ You can use an **IF node** in n8n to validate headers or IPs.
 5. File Name: `n8n-test-file.txt`
 6. File Content:
 ```plaintext
-This file was created by n8n via Lambda integration.
+{{ $json.result.body }}
 ```
 
 ---
@@ -100,6 +100,8 @@ This file was created by n8n via Lambda integration.
 ✅ You should see:
 - Lambda invoked and logged in CloudWatch
 - A file appear in your S3 bucket
+
+![Screenshot_1](https://github.com/user-attachments/assets/2012ea0b-1302-4500-9489-6a1e99230e0c)
 
 ---
 
