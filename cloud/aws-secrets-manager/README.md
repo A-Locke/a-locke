@@ -193,8 +193,11 @@ This project supports skills relevant to:
 ## ✅ Future Enhancements
 
 - 🚀 Host n8n Docker Setup in GitHub
+  
 Commit the Docker Compose setup and deployment scripts to a private or public GitHub repository. This enables easier collaboration, version control, and deployment tracking across environments.
+
 - ⚙️ Add GitHub Actions CI/CD Workflow
+  
 Automate deployment to the EC2 instance using GitHub Actions. For example, on push to main, use SSH to:
   - Pull the latest changes to the EC2 instance
   - Run start-n8n.sh to securely fetch updated secrets
