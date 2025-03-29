@@ -182,4 +182,20 @@ chmod +x start-n8n.sh
 
 ---
 
+## 🎯 Certification Relevance
 
+This project supports skills relevant to:
+
+- ✅ **EC2 & Docker Deployment**: Demonstrates automation of application deployment using shell scripts, Docker Compose, and EC2 Linux instances.
+- 🔐 **AWS Secrets Manager**: Implements secure secret management and runtime environment injection without storing secrets on disk.
+- 👤 **AWS IAM Roles**: Utilizes identity-based permissions and role attachment to EC2 for secure access to AWS services without static credentials.
+
+## ✅ Future Enhancements
+
+- 🚀 Host n8n Docker Setup in GitHub
+Commit the Docker Compose setup and deployment scripts to a private or public GitHub repository. This enables easier collaboration, version control, and deployment tracking across environments.
+- ⚙️ Add GitHub Actions CI/CD Workflow
+Automate deployment to the EC2 instance using GitHub Actions. For example, on push to main, use SSH to:
+  - Pull the latest changes to the EC2 instance
+  - Run start-n8n.sh to securely fetch updated secrets
+  - Restart the Docker container with the latest configuration
