@@ -131,7 +131,10 @@ Requires=docker.service
 Type=simple
 User=ubuntu
 WorkingDirectory=/home/ubuntu/n8n-docker
-ExecStart=/home/ubuntu/n8n-docker/start-n8n.sh
+
+ExecStartPre=/home/ubuntu/n8n-docker/start-n8n.sh
+ExecStart=/usr/bin/docker start -a n8n-docker-n8n-1
+ExecStop=/usr/bin/docker stop n8n-docker-n8n-1
 Restart=always
 
 [Install]
