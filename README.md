@@ -20,6 +20,8 @@ Here, I apply theory to real-world scenarios, reflect on lessons learned, and bu
 | AWS IAM, S3, Lambda | [AWS n8n Add-Ons Project](./cloud/aws-n8n-addons/README.md) |
 | AWS Secrets Manager and Docker | [AWS Secrets Manager and Docker](./cloud/aws-secrets-manager/README.md)  |
 | GitHub Actions + EC2 Deployment | [Automated GitHub to EC2 Deploy](./cloud/aws-n8n-git/README.md)        |
+| S3 Backups for EC2 Applications | [n8n Backup to S3 (cron + GitHub Actions)](./cloud/aws-s3-backup/README.md) |
+
 
 
 > 📝 *This table will expand as more projects are completed.*
