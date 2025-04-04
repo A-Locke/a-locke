@@ -43,6 +43,7 @@ To manage lifecycle rules via CLI or programmatically, ensure this policy is att
   ],
   "Resource": "arn:aws:s3:::your-bucket-name"
 }
+```
 
 ---
 
