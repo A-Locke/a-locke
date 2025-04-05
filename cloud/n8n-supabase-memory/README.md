@@ -47,38 +47,148 @@ Our goal is to build a ChatGPT-style memory structure:
          ↓
 [Insert Assistant Message] → store reply in Supabase
 ```
-## ✅ Step-by-Step Plan
+## ✅ New Workflow
 
-### 1. **Manual Message Logging**
-Use **PostgreSQL Insert nodes** to store messages with fields like:
-- `user_id`
-- `session_id`
-- `role` ('user' or 'assistant')
-- `content`
-- `created_at` (timestamp)
+![Screenshot_7](https://github.com/user-attachments/assets/a04b5785-c31d-4af4-989a-48016c7b9d54)
 
-### 2. **Session Management**
-- If `session_id` is `"new"` or missing → generate UUID
-- Otherwise, reuse session to maintain chat continuity
-
-### 3. **Memory Retrieval**
-Use **PostgreSQL Select** nodes to pull past messages by session or user:
-```sql
-SELECT role, content, image_url FROM n8n_chat_histories
-WHERE session_id = 'abc123'
-ORDER BY created_at ASC;
+### 1. **Webhook Trigger**
+- Accepts `POST` JSON from frontend:
+```json
+{
+  "user_id": "demo-user-1",
+  "session_id": "new", // or existing UUID
+  "message": "Hello!"
+}
 ```
 
-### 4. **Build Prompt for AI**
-Format retrieved messages into structured prompts:
+---
+
+### 2. **Check Session ID (Function Node)**
+Parses `body` of request, and sets `session_id = null` if `"new"` or missing.
+
+```javascript
+const body = $json.body;
+
+const session_id = (!body.session_id || body.session_id === "new")
+  ? null
+  : body.session_id;
+
+return [{
+  json: {
+    user_id: body.user_id,
+    message: body.message,
+    session_id
+  }
+}];
+```
+
+---
+
+### 3. **IF Node: Session ID Provided?**
+Routes:
+- True: go to existing session
+- False: create new session via UUID
+
+---
+
+### 4. **Generate UUID**
+Outputs:
 ```json
+{ "uuid": "..." }
+```
+
+---
+
+### 5. **Edit Fields Nodes (x2)**
+- Merge correct `user_id`, `message`, and final `session_id`
+- Reconstructed manually to ensure unified schema:
+```json
+{
+  "user_id": "...",
+  "message": "...",
+  "session_id": "..." // original or generated UUID
+}
+```
+
+---
+
+### 6. **Insert User Message (Postgres Insert)**
+- Inserts `user`, `session_id`, `message`, `role='user'`
+- Must use expression mode for dynamic values
+
+---
+
+### 7. **Fetch Memory (Postgres Query)**
+SQL:
+```sql
+SELECT role, content
+FROM n8n_chat_messages
+WHERE session_id = '{{ $json["session_id"] }}'
+ORDER BY created_at ASC
+LIMIT 10;
+```
+
+---
+
+### 8. **AI Agent (OpenRouter/OpenAI)**
+Builds prompt from memory:
+```text
 [
-  { "role": "user", "content": [
-    { "type": "text", "text": "What is this?" },
-    { "type": "image_url", "image_url": { "url": "https://..." } }
-  ]}
+  {
+    "role": "system",
+    "content": "You are a helpful assistant. Use the user's message and previous conversation to respond thoughtfully."
+  },
+  {
+    "role": "user",
+    "content": Chat History:
+{{ $node["Fetch Memory"].json.map(m => `${m.role}: ${m.content}`).join("\\n") }}
+  }
 ]
 ```
+
+---
+
+### 9. **Insert Assistant Message**
+Like Insert User Message but with:
+- `role = assistant`
+- `content = {{ $node["AI Agent"].json["message"] }}`
+
+---
+
+### 10. **Respond to Webhook**
+Returns:
+```json
+{
+  "reply": "AI response text"
+}
+```
+
+---
+
+## Testing Workflow
+
+As we don't currently have the frontend set, we'll be using https://hoppscotch.io/ 
+Set the Method to POST
+Set the address to your workflow test address
+Set the body to RAW and paste the following:
+
+``` json
+{
+  "user_id": "demo-user-1",
+  "session_id": "new",
+  "message": "Hello assistant!"
+}
+```
+![Screenshot_8](https://github.com/user-attachments/assets/71021d08-5478-46ad-9f7b-1cfee0d68f36)
+
+In N8N press Test Worlflow
+In Hoppscotch press Send
+Observe the execution
+![Screenshot_11](https://github.com/user-attachments/assets/1b1925cd-ff46-4f52-92cb-dea27e96841b)
+Observe the table in Supabase
+![Screenshot_9](https://github.com/user-attachments/assets/14524cec-11bb-4aa0-b9fa-a29fb112ba1d)
+
+
 
 ---
 
