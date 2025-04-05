@@ -31,7 +31,7 @@ Our goal is to build a ChatGPT-style memory structure:
 ---
 
 🧠 New Architecture (Textual Plan)
-'''
+```
 [Webhook Trigger]
    ↓
 [Check if session_id is valid]
@@ -46,8 +46,7 @@ Our goal is to build a ChatGPT-style memory structure:
 [Build Prompt] → format memory + current message
          ↓
 [Insert Assistant Message] → store reply in Supabase
-
-'''
+```
 ## ✅ Step-by-Step Plan
 
 ### 1. **Manual Message Logging**
