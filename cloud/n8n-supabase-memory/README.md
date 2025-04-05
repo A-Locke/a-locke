@@ -30,71 +30,56 @@ Our goal is to build a ChatGPT-style memory structure:
 
 ---
 
+🧠 New Architecture (Textual Plan)
+'''
+[Webhook Trigger]
+   ↓
+[Check if session_id is valid]
+   ↓                ↓
+[Use Provided]   [Generate UUID (new session)]
+   ↓                ↓
+     ↘            ↙
+     [Insert User Message] → log new/old in Supabase (with user_id, session_id)
+         ↓
+[Fetch Memory if session exists]
+         ↓
+[Build Prompt] → format memory + current message
+         ↓
+[Insert Assistant Message] → store reply in Supabase
+
+'''
 ## ✅ Step-by-Step Plan
 
 ### 1. **Manual Message Logging**
-Use **PostgreSQL Insert nodes** to write messages to Supabase. Each row includes:
+Use **PostgreSQL Insert nodes** to store messages with fields like:
 - `user_id`
 - `session_id`
 - `role` ('user' or 'assistant')
 - `content`
 - `created_at` (timestamp)
 
-### 2. **Memory Retrieval**
-Use **PostgreSQL Select nodes** to fetch chat history:
+### 2. **Session Management**
+- If `session_id` is `"new"` or missing → generate UUID
+- Otherwise, reuse session to maintain chat continuity
+
+### 3. **Memory Retrieval**
+Use **PostgreSQL Select** nodes to pull past messages by session or user:
 ```sql
-SELECT role, content FROM n8n_chat_histories
+SELECT role, content, image_url FROM n8n_chat_histories
 WHERE session_id = 'abc123'
 ORDER BY created_at ASC;
 ```
 
-### 3. **Building Prompts Manually**
-Inject fetched memory into a custom AI prompt:
+### 4. **Build Prompt for AI**
+Format retrieved messages into structured prompts:
+```json
+[
+  { "role": "user", "content": [
+    { "type": "text", "text": "What is this?" },
+    { "type": "image_url", "image_url": { "url": "https://..." } }
+  ]}
+]
 ```
-History:
-User: Hi
-Assistant: Hello!
-User: What’s the weather?
-
-Now user says:
-Where should I go next weekend?
-```
-
-### 4. **Session Handling Logic**
-- If `session_id` is missing or marked as `"new"`, generate a new UUID in n8n
-- Else use provided `session_id` to fetch full context
-
-### 5. **Unified Workflow**
-Single n8n workflow handles both new and continuing conversations based on `session_id` logic.
-
----
-
-## 🧠 Final Flow
-
-```
-[Webhook Trigger]
-   ↓
-[Normalize Session ID (Function)]
-   ↓
-[IF Node] → [UUID Generator] (if new session)
-   ↓
-[Insert User Message into Supabase]
-   ↓
-[Fetch Past Memory by session_id]
-   ↓
-[Build Prompt] → [AI Agent Node (OpenAI/OpenRouter)]
-   ↓
-[Insert Assistant Message into Supabase]
-```
-
----
-
-## ✨ Optional Enhancements
-
-- ✏️ **Session Listing**: Use `DISTINCT session_id` per user to show history
-- 🌟 **Titles for Conversations**: Use first message or summarization to label sessions
-- 🤔 **Memory Trimming**: Limit to last N messages for long conversations
-- 🔐 **Supabase Auth**: Protect memory per-user with JWT
 
 ---
 
