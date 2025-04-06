@@ -49,7 +49,8 @@ Our goal is to build a ChatGPT-style memory structure:
 ```
 ## ✅ New Workflow
 
-![Screenshot_7](https://github.com/user-attachments/assets/a04b5785-c31d-4af4-989a-48016c7b9d54)
+![Screenshot_4](https://github.com/user-attachments/assets/eba53369-b2e0-48ff-ad77-133770dd029a)
+
 
 ### 1. **Webhook Trigger**
 - Accepts `POST` JSON from frontend:
@@ -99,7 +100,7 @@ Outputs:
 
 ---
 
-### 5. **Edit Fields Nodes (x2)**
+### 5. **Edit Fields Nodes**
 - Merge correct `user_id`, `message`, and final `session_id`
 - Reconstructed manually to ensure unified schema:
 ```json
@@ -125,25 +126,37 @@ SELECT role, content
 FROM n8n_chat_messages
 WHERE session_id = '{{ $json["session_id"] }}'
 ORDER BY created_at ASC
-LIMIT 10;
+LIMIT 100;
 ```
 
 ---
 
-### 8. **AI Agent (OpenRouter/OpenAI)**
+### 8. **Aggregate**
+
+Fetch Memory node is returning multiple objects, we want to aggregate them into one. Use All Item Data (Into a single list)
+
+---
+
+### 9. **Format Memory**
+
+In this node we'll format our memory into the most suitable format for our prompt.
+Set "memory" array and use the following:
+```json
+{{ 
+  $json.content.map(entry => ({
+    role: entry.role,
+    content: entry.content
+  })) 
+}}
+```
+### 10. **AI Agent (OpenRouter/OpenAI)**
 Builds prompt from memory:
 ```text
-[
-  {
-    "role": "system",
-    "content": "You are a helpful assistant. Use the user's message and previous conversation to respond thoughtfully."
-  },
-  {
-    "role": "user",
-    "content": Chat History:
-{{ $node["Fetch Memory"].json.map(m => `${m.role}: ${m.content}`).join("\\n") }}
-  }
-]
+{{ $json.memory }}
+```
+System message is set separately for future convenience
+```text
+You are a helpful assistant. Use provided chat history to construct a response.
 ```
 
 ---
@@ -179,8 +192,6 @@ Set the body to RAW and paste the following:
   "message": "Hello assistant!"
 }
 ```
-![Screenshot_8](https://github.com/user-attachments/assets/71021d08-5478-46ad-9f7b-1cfee0d68f36)
-
 In N8N press Test Worlflow
 In Hoppscotch press Send
 Observe the execution
