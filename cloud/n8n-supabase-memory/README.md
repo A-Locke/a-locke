@@ -198,7 +198,8 @@ Observe the execution
 ![Screenshot_11](https://github.com/user-attachments/assets/1b1925cd-ff46-4f52-92cb-dea27e96841b)
 Observe the table in Supabase
 ![Screenshot_9](https://github.com/user-attachments/assets/14524cec-11bb-4aa0-b9fa-a29fb112ba1d)
-
+Consequitive messages can be tested with a simple html+js frontend that we'll be implementing in the next project.
+![Screenshot_1](https://github.com/user-attachments/assets/92d9774b-217b-44ea-82bb-947db32f44c9)
 
 
 ---
