@@ -22,6 +22,7 @@ Here, I apply theory to real-world scenarios, reflect on lessons learned, and bu
 | GitHub Actions + EC2 Deployment | [Automated GitHub to EC2 Deploy](./cloud/aws-n8n-git/README.md)        |
 | S3 Backups for EC2 Applications | [n8n Backup to S3 (cron + GitHub Actions)](./cloud/aws-s3-backup/README.md) |
 | AI Chatbot persistent memory via Supabase | [Supabase N8N Memory](./cloud/n8n-supabase-memory/README.md) |
+| Next.js frontend, auth and deployment via Vecrel| [Next.js frontend](./cloud/aws-n8n/nextjs-frontend/README.md) |
 
 
 
