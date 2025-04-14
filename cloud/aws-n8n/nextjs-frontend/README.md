@@ -104,10 +104,15 @@ Use `fetch` or `axios` in your Next.js API calls or components to hit the `BACKE
 
 That’s it — your fullstack AI chat app is live!
 It contains modern UI for login and sign in
+
 ![Screenshot_13](https://github.com/user-attachments/assets/40adf441-0b14-4998-b4b2-8792b1a48cc2)
+
 Main chat UI
+
 ![Screenshot_14](https://github.com/user-attachments/assets/a49758a7-c00b-48d0-8ea4-7f89cdc80a43)
+
 Collapsible sidebar containing session_ids of previous chats of the same user, sorted chronologically. Session_ids are interactible and load that session's history and allow continuation of that chat.
+
 ![Screenshot_15](https://github.com/user-attachments/assets/0d225219-8b66-4dcc-b76d-0c37de4a2f04)
 
 
