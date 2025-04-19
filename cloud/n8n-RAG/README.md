@@ -67,7 +67,7 @@ This makes the AI truly context-aware beyond its initial training data.
 
 ## Testing
 
-- Upload fake_meeting_notes to the google drive folder selected in the Upload tool
+- Upload (./cloud/n8n-rag/fake_meeting_notes.txt) to the google drive folder selected in the Upload tool
 - Observe that supabase documents table was updated with our chunks
 ![Screenshot_4](https://github.com/user-attachments/assets/28dd34fd-a191-428c-ab3b-2aaa94ad9f28)
 
