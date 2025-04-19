@@ -34,7 +34,7 @@ Main Features:
 - Documents are ingested from Google Drive automatically when created or updated.
 - Each document is processed by splitting it into chunks using a **Recursive Character Text Splitter**.
 - Text chunks are then converted into embeddings using **OpenAI's Embeddings model**.
-- The resulting vectorized data is stored in the Supabase database under the `documents` table.
+- The resulting vectorized data is stored in the Supabase database under the [documents](documents.sql) table.
 
 Nodes Involved:
 - Google Drive Triggers (File Created, File Updated)
