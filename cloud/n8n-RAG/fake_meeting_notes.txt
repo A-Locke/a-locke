@@ -1,0 +1,31 @@
+Meeting Notes - Acme Widgets Pricing Strategy
+
+Date: April 18, 2025
+Attendees: John Doe (CEO), Jane Smith (CFO), Alice Johnson (VP Sales), Bob Brown (Marketing Director)
+
+1. Overview
+The quarterly pricing review was conducted to align the new product pricing strategy with market conditions. Revenue for Q1 was up 8%, driven primarily by the premium segment.
+
+2. Proposed Price Adjustments
+- Standard Widget: Increase from $49 to $54
+- Premium Widget: Increase from $89 to $99
+- Widget Subscription Plan: Maintain at $15/month but introduce a 10% discount for annual prepayment.
+
+3. Competitive Analysis
+- WidgetCo recently raised prices by 12%.
+- Gearify maintained prices but launched a basic model with fewer features.
+- BetaTools lowered prices by 5% but is losing market share.
+
+4. Customer Feedback
+Surveys indicate that 75% of customers would tolerate a 5-10% price increase if accompanied by feature enhancements or loyalty rewards. There is a risk of losing 10% of price-sensitive customers.
+
+5. Marketing Campaign
+Bob Brown presented the upcoming "More Value Than Ever" campaign, emphasizing added features and long-term savings.
+
+6. Action Items
+- Update website pricing pages by May 1.
+- Notify existing customers two weeks in advance.
+- Train the sales team to handle price increase objections.
+
+7. Next Meeting
+Scheduled for July 15, 2025, to assess the impact of the changes.
