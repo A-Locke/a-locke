@@ -70,7 +70,9 @@ This makes the AI truly context-aware beyond its initial training data.
 - Upload fake_meeting_notes to the google drive folder selected in the Upload tool
 - Observe that supabase documents table was updated with our chunks
 ![Screenshot_4](https://github.com/user-attachments/assets/28dd34fd-a191-428c-ab3b-2aaa94ad9f28)
+
 - Query the chatbot for some information contailed in the fake data and observe
+
 ![Screenshot_1](https://github.com/user-attachments/assets/acaaa182-2926-4141-9178-352d0fba8ef3)
 
 ---
