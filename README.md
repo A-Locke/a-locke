@@ -24,6 +24,7 @@ Here, I apply theory to real-world scenarios, reflect on lessons learned, and bu
 | AI Chatbot persistent memory via Supabase | [Supabase N8N Memory](./cloud/n8n-supabase-memory/README.md) |
 | Next.js frontend, auth and deployment via Vecrel| [Next.js frontend](./cloud/aws-n8n/nextjs-frontend/README.md) |
 | n8n RAG using Supabase Vector DB| [n8n RAG](./cloud/n8n-RAG/README.md) |
+| Migrating from nginx reverse proxy to AWS ALB| [nginx to ALB](./cloud/nginx-to-alb) |
 
 
 
