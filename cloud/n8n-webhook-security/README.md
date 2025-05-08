@@ -44,7 +44,7 @@ In your Vercel project:
 | ---------------------- | ----------------------------------- | ----------- |
 | `N8N_API_HEADER_NAME`  | `x-n8n-access`                      | All         |
 | `N8N_API_HEADER_VALUE` | `secure-key-abc123`                 | All         |
-| `N8N_WEBHOOK_URL`      | `https://n8n.n8n.your.address/webhook/chat` | All         |
+| `N8N_WEBHOOK_URL`      | `https://n8n.your.address/webhook/chat` | All         |
 
 3. Redeploy your frontend project so the environment variables are available.
 
