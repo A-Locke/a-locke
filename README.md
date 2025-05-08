@@ -25,6 +25,7 @@ Here, I apply theory to real-world scenarios, reflect on lessons learned, and bu
 | Next.js frontend, auth and deployment via Vecrel| [Next.js frontend](./cloud/aws-n8n/nextjs-frontend/README.md) |
 | n8n RAG using Supabase Vector DB| [n8n RAG](./cloud/n8n-RAG/README.md) |
 | Migrating from nginx reverse proxy to AWS ALB| [nginx to ALB](./cloud/nginx-to-alb) |
+| Securing n8n webhooks with header auth | [header webhook auth](./cloud/n8n-webhook-security) |
 
 
 
