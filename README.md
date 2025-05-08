@@ -26,6 +26,7 @@ Here, I apply theory to real-world scenarios, reflect on lessons learned, and bu
 | n8n RAG using Supabase Vector DB| [n8n RAG](./cloud/n8n-RAG/README.md) |
 | Migrating from nginx reverse proxy to AWS ALB| [nginx to ALB](./cloud/nginx-to-alb) |
 | Securing n8n webhooks with header auth | [header webhook auth](./cloud/n8n-webhook-security) |
+| AWS WAF (Web Application Firewall) and logs | [waf and logging](./cloud/aws-waf-and-logging) |
 
 
 
