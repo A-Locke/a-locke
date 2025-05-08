@@ -20,7 +20,7 @@ Using a custom HTTP header adds an extra layer of defense without needing full t
 
 In your **Webhook Trigger node**, select the `Header Auth` method:
 
-![Screenshot_10](https://github.com/user-attachments/assets/fee7fc79-d586-4afd-a981-a18551dcee27)
+![Screenshot_10](https://github.com/user-attachments/assets/5ee20246-ea0d-4062-b7cd-7b9aa01be1bf)
 
 
 Configure it like this:
