@@ -20,7 +20,8 @@ Using a custom HTTP header adds an extra layer of defense without needing full t
 
 In your **Webhook Trigger node**, select the `Header Auth` method:
 
-![Webhook Auth Dropdown](https://chat.openai.com/file/PeBdkH3LLs2Eo29Zik4PKg)
+![Screenshot_10](https://github.com/user-attachments/assets/fee7fc79-d586-4afd-a981-a18551dcee27)
+
 
 Configure it like this:
 
