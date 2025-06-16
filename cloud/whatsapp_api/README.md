@@ -1,10 +1,10 @@
 
-# WhatsApp Business API Setup for n8n Automation (Czech Republic)
+# WhatsApp Business API Setup for n8n Automation
 
 This README guides you through the process of registering a WhatsApp Business Account and obtaining WhatsApp API access via Meta, specifically for use in **n8n automation workflows**. This setup assumes:
 
-- Your company is based in the **Czech Republic** and has a valid **IČO** (Identifikační číslo osoby).
 - You've deployed a public **one-page business website** using this template: [one-page-web-public](https://github.com/A-Locke/one-page-web-public).
+- You have a registered business or you're registered as an individual entrepreneur
 
 ---
 
@@ -12,7 +12,7 @@ This README guides you through the process of registering a WhatsApp Business Ac
 
 Before proceeding, ensure you have the following:
 
-1. **Valid IČO**: Registered in the Czech ARES registry.
+1. **Valid business ID**: Depending on the country of residence may vary
 2. **One-page website**: Hosted using [this template](https://github.com/A-Locke/one-page-web-public) and publicly accessible.
 3. **Meta Business Account (Business Manager)**:
    - [Sign up here](https://business.facebook.com/)
@@ -29,7 +29,7 @@ Before proceeding, ensure you have the following:
 2. Click **"Create Account"** and follow the setup:
    - Business Name
    - Name & Business Email
-   - Business Address (as per your IČO listing)
+   - Business Address
    - Website (link to your one-page site)
 
 ---
@@ -41,8 +41,8 @@ While optional for some cases, **verification is highly recommended** for full A
 1. In Business Manager, navigate to:  
    **Business Settings → Security Center → Business Verification**
 2. Submit:
-   - **Business Name** (must match IČO registry)
-   - **Document**: Extract from ARES or other official registry
+   - **Business Name**
+   - **Document**: Extract from an official registry
    - **Proof of Address**: Utility bill, tax document, etc.
 3. **Domain Verification** (important for API usage):
    - Go to: **Business Settings → Brand Safety → Domains**
@@ -124,10 +124,10 @@ In n8n, use the **HTTP Request** node or a community WhatsApp module:
 
 ## 📋 Naming & Compliance Guidelines
 
-- **Display Name**: Must match your IČO-registered name or a verifiable brand.
+- **Display Name**: Must match your registered name or a verifiable brand.
 - **Website**: Should include:
   - Contact details
-  - Address (preferably Czech)
+  - Address 
   - Optional: Privacy Policy
 
 Refer to [Meta’s Display Name Guidelines](https://developers.facebook.com/docs/whatsapp/display-name/) for naming restrictions.
@@ -139,8 +139,6 @@ Refer to [Meta’s Display Name Guidelines](https://developers.facebook.com/docs
 - [WhatsApp Business Platform Docs](https://developers.facebook.com/docs/whatsapp/)
 - [Meta Business Manager](https://business.facebook.com/)
 - [n8n WhatsApp API Example](https://n8n.io/workflows/)
-- [ARES – Czech Company Registry](https://wwwinfo.mfcr.cz/ares/ares.html)
-
 ---
 
 ## 📬 Support
