@@ -27,8 +27,7 @@ Here, I apply theory to real-world scenarios, reflect on lessons learned, and bu
 | Migrating from nginx reverse proxy to AWS ALB| [nginx to ALB](./cloud/nginx-to-alb) |
 | Securing n8n webhooks with header auth | [header webhook auth](./cloud/n8n-webhook-security) |
 | AWS WAF (Web Application Firewall) and logs | [waf and logging](./cloud/aws-waf-and-logging) |
-
-
+| One Page Website Template | [one-page-web-public](https://github.com/A-Locke/one-page-web-public) |
 
 
 > 📝 *This table will expand as more projects are completed.*
