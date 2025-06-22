@@ -29,7 +29,7 @@ Here, I apply theory to real-world scenarios, reflect on lessons learned, and bu
 | AWS WAF (Web Application Firewall) and logs | [waf and logging](./cloud/aws-waf-and-logging) |
 | One Page Website Template | [one-page-web-public](https://github.com/A-Locke/one-page-web-public) |
 | WhatsApp Business API Setup for n8n | [WhatsApp API](./cloud/whatsapp_api) |
-
+| Kubernetes Cluster on Oracle Free Tier for n8n queue mode | [Kubernetes n8n](./cloud/kubernetes) |
 
 > 📝 *This table will expand as more projects are completed.*
 
