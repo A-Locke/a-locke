@@ -76,11 +76,11 @@ This defines the VM workers that will run your workloads.
 ✅ Make sure Public IP Address Assignment is enabled (optional but useful for first setup/debugging)
 5. Access & Authentication
 
-Keep RBAC and Kubeconfig options enabled:
+- Keep RBAC and Kubeconfig options enabled:
 
-    Oracle will generate the kubeconfig file you’ll need for kubectl access.
+- Oracle will generate the kubeconfig file you’ll need for kubectl access.
 
-    You can download it after the cluster is created.
+- You can download it after the cluster is created.
 
 🛠6. Create the Cluster
 
@@ -90,17 +90,17 @@ Click Create Cluster at the bottom of the page.
 
 🚨 Possible issue
 
-Out of host capacity means Oracle Cloud Infrastructure (OCI) does not currently have enough available hardware resources in the selected Availability Domain (AD) within the Frankfurt (eu-frankfurt-1) region to fulfill your request — most likely due to limited Free Tier-compatible VM shapes like VM.Standard.A1.Flex being over-utilized.
+- Out of host capacity means Oracle Cloud Infrastructure (OCI) does not currently have enough available hardware resources in the selected Availability Domain (AD) within the Frankfurt (eu-frankfurt-1) region to fulfill your request — most likely due to limited Free Tier-compatible VM shapes like VM.Standard.A1.Flex being over-utilized.
 
-This is not a bug in your setup — it is a common limitation with always-free or heavily subscribed shapes.
+- This is not a bug in your setup — it is a common limitation with always-free or heavily subscribed shapes.
 
 If that happens:
 
-    Try different Availability Domains.
+- Try different Availability Domains.
 
-    Attempt deployment during off-peak hours.
+- Attempt deployment during off-peak hours.
 	
-	Consider switching to Pay As You Go mode instead of Free Tier(set up a Budget to notify you if any costs are incurred)
+- Consider switching to Pay As You Go mode instead of Free Tier(set up a Budget to notify you if any costs are incurred)
 
 ---
 
