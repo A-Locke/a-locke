@@ -50,6 +50,7 @@ It’s a great choice for hobby projects, startups, or proof-of-concept chatbot/
 1. Create free Oracle Cloud account
 2. Go to **Developer Services → Kubernetes Clusters (OKE)** > Quick Create
 3. Configure Cluster Basics
+   
 | Field                  | Suggested Value                                 |
 | ---------------------- | ----------------------------------------------- |
 | **Name**               | `n8n-cluster`                                   |
