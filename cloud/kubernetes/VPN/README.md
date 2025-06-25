@@ -153,8 +153,8 @@ interface=wg0
 listen-address=10.10.10.1
 listen-address=127.0.0.1
 bind-interfaces
-domain=locke.cz
-address=/dashboard.locke.cz/10.0.10.96
+domain=your.domain
+address=/dashboard.your.domain/10.0.10.96
 ```
 
 3. Restart dnsmasq:
