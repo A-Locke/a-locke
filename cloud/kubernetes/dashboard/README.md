@@ -6,7 +6,7 @@ This guide outlines the process to:
 - Automate trusted certificate issuance for the Kubernetes Dashboard using Let's Encrypt with DNS-01 challenges
 
 ## ✅ Prerequisites
-- Control of your domain (e.g., locke.cz)
+- Control of your domain
 - Access to your domain registrar
 - Access to your Kubernetes cluster with NGINX Ingress installed
 - Cert-Manager installed (https://cert-manager.io/docs/installation/)
@@ -16,7 +16,7 @@ This guide outlines the process to:
 ## 🛠 Step 1: Move DNS to Cloudflare
 
 1. Sign up at [https://cloudflare.com](https://cloudflare.com)
-2. Add your domain (e.g., locke.cz)
+2. Add your domain (e.g., your.domain)
 3. Cloudflare will scan your existing DNS records
 4. Update your domain registrar's nameservers to Cloudflare's provided servers
 5. Wait for DNS propagation (typically <24h)
@@ -30,7 +30,7 @@ This guide outlines the process to:
 3. Create a token with:
    - Zone → DNS → Edit
    - Zone → Zone → Read
-4. Scope token to your `locke.cz` domain
+4. Scope token to your `your.domain` domain
 5. Save the token securely
 
 ---
@@ -89,9 +89,9 @@ spec:
   issuerRef:
     name: letsencrypt-cloudflare
     kind: ClusterIssuer
-  commonName: dashboard.locke.cz
+  commonName: dashboard.your.domain
   dnsNames:
-  - dashboard.locke.cz
+  - dashboard.your.domain
 ```
 
 ```
@@ -117,7 +117,7 @@ metadata:
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
 spec:
   rules:
-  - host: dashboard.locke.cz
+  - host: dashboard.your.domain
     http:
       paths:
       - path: /
@@ -129,7 +129,7 @@ spec:
               number: 443
   tls:
   - hosts:
-    - dashboard.locke.cz
+    - dashboard.your.domain
     secretName: dashboard-tls
 ```
 
@@ -141,7 +141,7 @@ kubectl apply -f dashboard-ingress.yaml
 
 # 🎉 Result
 
-✔ Your Kubernetes Dashboard is available at `https://dashboard.locke.cz`  
+✔ Your Kubernetes Dashboard is available at `https://dashboard.your.domain`  
 ✔ Fully trusted Let's Encrypt certificate via DNS-01  
 ✔ Automatic certificate renewal handled by Cert-Manager  
 
