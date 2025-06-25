@@ -32,6 +32,7 @@ Here, I apply theory to real-world scenarios, reflect on lessons learned, and bu
 | Kubernetes Cluster on Oracle Free Tier for n8n queue mode pt1 | [Kubernetes Cluser for n8n](./cloud/kubernetes/README.md) |
 | Kubernetes Cluster on Oracle Free Tier for n8n queue mode pt2 | [n8n deployment in k8s](./cloud/kubernetes/n8n-deployment) |
 | Kubernetes Cluster on Oracle Free Tier for n8n queue mode pt3 | [VPN in k8s](./cloud/kubernetes/VPN/README.md) |
+| Kubernetes Cluster on Oracle Free Tier for n8n queue mode pt4 | [DNS-01 certificate for non-public resources](./cloud/kubernetes/dashboard/README.md) |
 
 
 
