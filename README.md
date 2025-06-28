@@ -31,10 +31,10 @@ Here, I apply theory to real-world scenarios, reflect on lessons learned, and bu
 | WhatsApp Business API Setup for n8n | [WhatsApp API](./cloud/whatsapp_api) |
 | Kubernetes Cluster on Oracle Free Tier for n8n queue mode pt1 | [Kubernetes Cluser for n8n](./cloud/kubernetes/README.md) |
 | Kubernetes Cluster on Oracle Free Tier for n8n queue mode pt2 | [n8n deployment in k8s](./cloud/kubernetes/n8n-deployment) |
-| Kubernetes Cluster on Oracle Free Tier for n8n queue mode pt3 | [VPN in k8s](./cloud/kubernetes/VPN/README.md) |
-| Kubernetes Cluster on Oracle Free Tier for n8n queue mode pt4 | [DNS-01 certificate for non-public resources](./cloud/kubernetes/dashboard/README.md) |
-| Kubernetes Cluster on Oracle Free Tier for n8n queue mode pt5 | [Splitting n8n admin and webhook ingress](./cloud/kubernetes/n8n-admin-privacy/README.md) |
-
+| VPN for Kubernetes Dashboards | [VPN in k8s](./cloud/kubernetes/VPN/README.md) |
+| DNS-01 for Kubernetes Dashboards hidden under VPN | [DNS-01 certificate for non-public resources](./cloud/kubernetes/dashboard/README.md) |
+| Splitting private and public n8n resources on Kubernetes | [Splitting n8n admin and webhook ingress](./cloud/kubernetes/n8n-admin-privacy/README.md) |
+| Kubernetes Dashboard login | [Kubernetes dashboard access](./cloud/kubernetes/dashboard/access/README.md) |
 
 
 > 📝 *This table will expand as more projects are completed.*
