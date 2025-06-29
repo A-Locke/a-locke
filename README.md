@@ -35,6 +35,8 @@ Here, I apply theory to real-world scenarios, reflect on lessons learned, and bu
 | DNS-01 for Kubernetes Dashboards hidden under VPN | [DNS-01 certificate for non-public resources](./cloud/kubernetes/dashboard/README.md) |
 | Splitting private and public n8n resources on Kubernetes | [Splitting n8n admin and webhook ingress](./cloud/kubernetes/n8n-admin-privacy/README.md) |
 | Kubernetes Dashboard login | [Kubernetes dashboard access](./cloud/kubernetes/dashboard/access/README.md) |
+| Kubernetes resources extraction for Helm | [Kubernetes to yaml to helm](./cloud/kubernetes/helm/README.md) |
+| Kubernetes node pool migration to Always Free | [Kubernetes node pool migration](./cloud/kubernetes/costs/README.md) |
 
 
 > 📝 *This table will expand as more projects are completed.*
