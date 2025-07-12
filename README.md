@@ -37,6 +37,7 @@ Here, I apply theory to real-world scenarios, reflect on lessons learned, and bu
 | Kubernetes Dashboard login | [Kubernetes dashboard access](./cloud/kubernetes/dashboard/access/README.md) |
 | Kubernetes resources extraction for Helm | [Kubernetes to yaml to helm](./cloud/kubernetes/helm/README.md) |
 | Kubernetes node pool migration to Always Free | [Kubernetes node pool migration](./cloud/kubernetes/costs/README.md) |
+| Switching between Kubernetes cluster context using aliases | [Kubernetes context alias](./cloud/kubernetes/context) |
 
 
 > 📝 *This table will expand as more projects are completed.*
