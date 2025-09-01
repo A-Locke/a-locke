@@ -12,6 +12,33 @@ Here, I apply theory to real-world scenarios, reflect on lessons learned, and bu
 
 ---
 
+## 🌟 Featured Open Source Projects
+
+### [OCI Infra Pipeline — CI/CD on Oracle Cloud Free Tier](https://github.com/A-Locke/n8n_kubernetes)
+
+A **GitHub Actions CI/CD pipeline** for deploying an **Oracle Cloud Infrastructure (OCI) Kubernetes cluster** on the Free Tier.  
+It provisions and configures:  
+- OKE Kubernetes Cluster with Helm-managed apps (Cert-Manager, Ingress-Nginx, PostgreSQL, pgAdmin, n8n)  
+- **WireGuard VPN** for secure access  
+- **Cloudflare DNS automation** for certificates and DNS records  
+
+Includes a full guide to setting up required **GitHub Secrets**, cost comparisons with AWS/Azure, and scripts for key/secret management. Designed to demonstrate scalable **n8n regular vs. queue modes** and practical cloud automation.
+
+---
+
+### [Professional One-Page Website Template](https://github.com/A-Locke/one-page-web-public)
+
+A clean, open-source, **Next.js 15 single-page website template** for professionals.  
+Features include:  
+- Configurable **personal branding, certifications, and social links**  
+- **Dynamic Credly badge integration** (1–10 badges)  
+- **Footer with business information** for verification readiness  
+- Built with **Tailwind CSS v4** and **shadcn/ui components**  
+
+Includes configuration via environment variables and **ready-to-deploy setup on Vercel**, making it ideal for personal or professional use.
+
+---
+
 ## 🛠️ Skills & Projects
 
 | Skill / Topic                    | Project                                                                 |
@@ -27,7 +54,6 @@ Here, I apply theory to real-world scenarios, reflect on lessons learned, and bu
 | Migrating from nginx reverse proxy to AWS ALB| [nginx to ALB](./cloud/nginx-to-alb) |
 | Securing n8n webhooks with header auth | [header webhook auth](./cloud/n8n-webhook-security) |
 | AWS WAF (Web Application Firewall) and logs | [waf and logging](./cloud/aws-waf-and-logging) |
-| One Page Website Template | [one-page-web-public](https://github.com/A-Locke/one-page-web-public) |
 | WhatsApp Business API Setup for n8n | [WhatsApp API](./cloud/whatsapp_api) |
 | Kubernetes Cluster on Oracle Free Tier for n8n queue mode pt1 | [Kubernetes Cluser for n8n](./cloud/kubernetes/README.md) |
 | Kubernetes Cluster on Oracle Free Tier for n8n queue mode pt2 | [n8n deployment in k8s](./cloud/kubernetes/n8n-deployment) |
@@ -38,7 +64,6 @@ Here, I apply theory to real-world scenarios, reflect on lessons learned, and bu
 | Kubernetes resources extraction for Helm | [Kubernetes to yaml to helm](./cloud/kubernetes/helm/README.md) |
 | Kubernetes node pool migration to Always Free | [Kubernetes node pool migration](./cloud/kubernetes/costs/README.md) |
 | Switching between Kubernetes cluster context using aliases | [Kubernetes context alias](./cloud/kubernetes/context) |
-
 
 > 📝 *This table will expand as more projects are completed.*
 
@@ -51,4 +76,3 @@ Here, I apply theory to real-world scenarios, reflect on lessons learned, and bu
 ---
 
 > 🚧 This repository is a living document and will evolve as I complete new projects and progress toward certification goals.
-
