@@ -73,7 +73,8 @@ Includes configuration via environment variables and **ready-to-deploy setup on 
 
 [![ISC2 CC](https://images.credly.com/size/340x340/images/e98395d6-e705-430a-98d8-9bfbadbf97f2/image.png)](https://www.credly.com/badges/2054310e-e8ff-4b2d-8fa7-ab33a975c32c/linked_in?t=st7jq3)
 
-[![Oracle Cloud Infrastructure 2025 Certified Foundations Associate](https://brm-certview.oracle.com/ords/certview/p_get_ocp_logo?p_id=2002)](https://catalog-education.oracle.com/ords/certview/sharebadge?id=048F0DCA9846D6E18D3F09CE0CD4104D953BFB952FFBF4705F688C8ADDA65020)
+[![Oracle Cloud Infrastructure 2025 Certified Foundations Associate](![OCI25FNDCFA](https://github.com/user-attachments/assets/27a6991e-13f2-4479-8940-d7a2222673f5)
+)](https://catalog-education.oracle.com/ords/certview/sharebadge?id=048F0DCA9846D6E18D3F09CE0CD4104D953BFB952FFBF4705F688C8ADDA65020)
 
 ---
 
