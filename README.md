@@ -1,80 +1,178 @@
-# 👋 Hi there, I'm Arthur Locke. 
+# 👋 Hi there, I'm Arthur Locke.
+
 # Welcome to my Project Hub!
 
-[![Connect on LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/arthur-locke/)
+[![Connect on
+LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/arthur-locke/)
 
----
+------------------------------------------------------------------------
 
 ## 🧭 Objective
 
-This repository documents my **hands-on learning journey** in **Cybersecurity**, **Cloud Computing**, and **Artificial Intelligence**. Each project is a step toward mastering key skills and preparing for industry-recognized certifications.  
-Here, I apply theory to real-world scenarios, reflect on lessons learned, and build a portfolio that showcases my technical capabilities.
+This repository documents my **hands-on learning journey** in
+**Cybersecurity**, **Cloud Computing**, and **Artificial Intelligence**.
 
----
+Each project represents applied learning --- taking concepts from
+documentation, courses, and certifications and implementing them in real
+environments.
 
-## 🌟 Featured Open Source Projects
+The goal is to build a portfolio that demonstrates:
 
-### [OCI Infra Pipeline — CI/CD on Oracle Cloud Free Tier](https://github.com/A-Locke/n8n_kubernetes)
+-   real infrastructure deployment
+-   secure system design
+-   automation and CI/CD
+-   AI‑augmented engineering workflows
 
-A **GitHub Actions CI/CD pipeline** for deploying an **Oracle Cloud Infrastructure (OCI) Kubernetes cluster** on the Free Tier.  
-It provisions and configures:  
-- OKE Kubernetes Cluster with Helm-managed apps (Cert-Manager, Ingress-Nginx, PostgreSQL, pgAdmin, n8n)  
-- **WireGuard VPN** for secure access  
-- **Cloudflare DNS automation** for certificates and DNS records  
+------------------------------------------------------------------------
 
-Includes a full guide to setting up required **GitHub Secrets**, cost comparisons with AWS/Azure, and scripts for key/secret management. Designed to demonstrate scalable **n8n regular vs. queue modes** and practical cloud automation.
+# 🌟 Featured Projects
 
----
+## 🤖 AI‑Augmented QA Automation
 
-### [Professional One-Page Website Template](https://github.com/A-Locke/one-page-web-public)
+### [AI Agentic QA --- Playwright Planner → Generator → Healer](https://github.com/A-Locke/ai-agentic-qa-saucedemo)
 
-A clean, open-source, **Next.js 15 single-page website template** for professionals.  
-Features include:  
-- Configurable **personal branding, certifications, and social links**  
-- **Dynamic Credly badge integration** (1–10 badges)  
-- **Footer with business information** for verification readiness  
-- Built with **Tailwind CSS v4** and **shadcn/ui components**  
+A project exploring **AI‑assisted QA automation workflows** using
+**Playwright + Claude Code**.
 
-Includes configuration via environment variables and **ready-to-deploy setup on Vercel**, making it ideal for personal or professional use.
+This experiment demonstrates how an AI‑driven pipeline can transform a
+**Product Requirements Document (PRD)** into a working Playwright test
+suite and maintain it when UI changes occur.
 
----
+Workflow demonstrated:
 
-## 🛠️ Skills & Projects
+-   **Planner Agent** → converts a PRD into a structured test plan
+-   **Generator Agent** → produces deterministic Playwright tests
+-   **Healer Agent** → repairs failing tests caused by simulated UI
+    drift
 
-| Skill / Topic                    | Project                                                                 |
-|----------------------------------|-------------------------------------------------------------------------|
-| AWS EC2 n8n                | [Deploy n8n to EC2 via Docker](./cloud/aws-n8n)                   |
-| AWS IAM, S3, Lambda | [AWS n8n Add-Ons Project](./cloud/aws-n8n-addons/README.md) |
-| AWS Secrets Manager and Docker | [AWS Secrets Manager and Docker](./cloud/aws-secrets-manager/README.md)  |
-| GitHub Actions + EC2 Deployment | [Automated GitHub to EC2 Deploy](./cloud/aws-n8n-git/README.md)        |
-| S3 Backups for EC2 Applications | [n8n Backup to S3 (cron + GitHub Actions)](./cloud/aws-s3-backup/README.md) |
-| AI Chatbot persistent memory via Supabase | [Supabase N8N Memory](./cloud/n8n-supabase-memory/README.md) |
-| Next.js frontend, auth and deployment via Vecrel| [Next.js frontend](./cloud/aws-n8n/nextjs-frontend/README.md) |
-| n8n RAG using Supabase Vector DB| [n8n RAG](./cloud/n8n-RAG/README.md) |
-| Migrating from nginx reverse proxy to AWS ALB| [nginx to ALB](./cloud/nginx-to-alb) |
-| Securing n8n webhooks with header auth | [header webhook auth](./cloud/n8n-webhook-security) |
-| AWS WAF (Web Application Firewall) and logs | [waf and logging](./cloud/aws-waf-and-logging) |
-| WhatsApp Business API Setup for n8n | [WhatsApp API](./cloud/whatsapp_api) |
-| Kubernetes Cluster on Oracle Free Tier for n8n queue mode pt1 | [Kubernetes Cluser for n8n](./cloud/kubernetes/README.md) |
-| Kubernetes Cluster on Oracle Free Tier for n8n queue mode pt2 | [n8n deployment in k8s](./cloud/kubernetes/n8n-deployment) |
-| VPN for Kubernetes Dashboards | [VPN in k8s](./cloud/kubernetes/VPN/README.md) |
-| DNS-01 for Kubernetes Dashboards hidden under VPN | [DNS-01 certificate for non-public resources](./cloud/kubernetes/dashboard/README.md) |
-| Splitting private and public n8n resources on Kubernetes | [Splitting n8n admin and webhook ingress](./cloud/kubernetes/n8n-admin-privacy/README.md) |
-| Kubernetes Dashboard login | [Kubernetes dashboard access](./cloud/kubernetes/dashboard/access/README.md) |
-| Kubernetes resources extraction for Helm | [Kubernetes to yaml to helm](./cloud/kubernetes/helm/README.md) |
-| Kubernetes node pool migration to Always Free | [Kubernetes node pool migration](./cloud/kubernetes/costs/README.md) |
-| Switching between Kubernetes cluster context using aliases | [Kubernetes context alias](./cloud/kubernetes/context) |
+Highlights:
 
-> 📝 *This table will expand as more projects are completed.*
+-   Playwright test suite for the **SauceDemo** demo application
+-   Simulated locator drift and AI‑assisted repair
+-   Version‑controlled workflow separating **stable automation
+    (`main`)** from **experimental healing scenarios**
+-   Real debugging examples (test ID mismatch and brittle currency
+    assertions)
 
----
+Future phase:
 
-## 🧪 Certifications
+Converting the suite into **Playwright CLI playbooks** for agent‑driven
+browser execution.
 
-[![ISC2 CC](https://images.credly.com/size/340x340/images/e98395d6-e705-430a-98d8-9bfbadbf97f2/image.png)](https://www.credly.com/badges/2054310e-e8ff-4b2d-8fa7-ab33a975c32c/linked_in?t=st7jq3)
+------------------------------------------------------------------------
 
-[![Oracle Cloud Infrastructure 2025 Certified Foundations Associate](https://github.com/user-attachments/assets/27a6991e-13f2-4479-8940-d7a2222673f5)](https://catalog-education.oracle.com/ords/certview/sharebadge?id=048F0DCA9846D6E18D3F09CE0CD4104D953BFB952FFBF4705F688C8ADDA65020)
+## ☁️ OCI Infrastructure Pipeline --- CI/CD on Oracle Cloud Free Tier
 
----
+### [OCI Infra Pipeline](https://github.com/A-Locke/n8n_kubernetes)
 
-> 🚧 This repository is a living document and will evolve as I complete new projects and progress toward certification goals.
+A **GitHub Actions CI/CD pipeline** for deploying an **Oracle Cloud
+Infrastructure (OCI) Kubernetes cluster** on the Free Tier.
+
+Infrastructure deployed:
+
+-   OKE Kubernetes cluster
+-   Helm-managed applications
+-   WireGuard VPN for secure access
+-   Cloudflare DNS automation
+
+Apps deployed:
+
+-   Cert‑Manager
+-   Ingress‑Nginx
+-   PostgreSQL
+-   pgAdmin
+-   n8n
+
+This project focuses on **secure infrastructure automation and
+cost‑efficient cloud architecture**.
+
+------------------------------------------------------------------------
+
+## 🌐 Professional One‑Page Website Template
+
+### [Next.js One‑Page Template](https://github.com/A-Locke/one-page-web-public)
+
+A clean, open‑source **Next.js 15 single‑page website template** for
+professionals.
+
+Features:
+
+-   Configurable personal branding
+-   Dynamic Credly badge integration
+-   Business information footer
+-   Tailwind CSS v4 + shadcn/ui components
+-   Ready‑to‑deploy configuration for Vercel
+
+------------------------------------------------------------------------
+
+# 🛠️ Skills & Projects
+
+  ---------------------------------------------------------------------------------------------------------
+  Skill / Topic                                  Project
+  ---------------------------------------------- ----------------------------------------------------------
+  AWS EC2 n8n                                    [Deploy n8n to EC2 via Docker](./cloud/aws-n8n)
+
+  AWS IAM, S3, Lambda                            [AWS n8n Add-Ons
+                                                 Project](./cloud/aws-n8n-addons/README.md)
+
+  AWS Secrets Manager and Docker                 [AWS Secrets Manager and
+                                                 Docker](./cloud/aws-secrets-manager/README.md)
+
+  GitHub Actions + EC2 Deployment                [Automated GitHub to EC2
+                                                 Deploy](./cloud/aws-n8n-git/README.md)
+
+  S3 Backups for EC2 Applications                [n8n Backup to S3](./cloud/aws-s3-backup/README.md)
+
+  AI Chatbot persistent memory via Supabase      [Supabase n8n
+                                                 Memory](./cloud/n8n-supabase-memory/README.md)
+
+  Next.js frontend, auth and deployment via      [Next.js
+  Vercel                                         frontend](./cloud/aws-n8n/nextjs-frontend/README.md)
+
+  n8n RAG using Supabase Vector DB               [n8n RAG](./cloud/n8n-RAG/README.md)
+
+  Migrating from nginx reverse proxy to AWS ALB  [nginx to ALB](./cloud/nginx-to-alb)
+
+  Securing n8n webhooks with header auth         [header webhook auth](./cloud/n8n-webhook-security)
+
+  AWS WAF and logging                            [WAF and logging](./cloud/aws-waf-and-logging)
+
+  WhatsApp Business API Setup for n8n            [WhatsApp API](./cloud/whatsapp_api)
+
+  Kubernetes cluster on Oracle Free Tier (pt1)   [Kubernetes cluster](./cloud/kubernetes/README.md)
+
+  Kubernetes cluster on Oracle Free Tier (pt2)   [n8n deployment in k8s](./cloud/kubernetes/n8n-deployment)
+
+  VPN for Kubernetes dashboards                  [VPN in k8s](./cloud/kubernetes/VPN/README.md)
+
+  DNS‑01 certificates for private dashboards     [DNS‑01 setup](./cloud/kubernetes/dashboard/README.md)
+
+  Splitting public/private n8n resources         [Admin
+                                                 privacy](./cloud/kubernetes/n8n-admin-privacy/README.md)
+
+  Kubernetes dashboard access                    [Dashboard
+                                                 login](./cloud/kubernetes/dashboard/access/README.md)
+
+  Kubernetes resources extraction for Helm       [Kubernetes → Helm](./cloud/kubernetes/helm/README.md)
+
+  Kubernetes node pool migration                 [Node pool migration](./cloud/kubernetes/costs/README.md)
+
+  Kubernetes context switching aliases           [Context alias](./cloud/kubernetes/context)
+  ---------------------------------------------------------------------------------------------------------
+
+> 📝 This table expands as new projects are completed.
+
+------------------------------------------------------------------------
+
+# 🧪 Certifications
+
+[![ISC2
+CC](https://images.credly.com/size/340x340/images/e98395d6-e705-430a-98d8-9bfbadbf97f2/image.png)](https://www.credly.com/badges/2054310e-e8ff-4b2d-8fa7-ab33a975c32c/linked_in?t=st7jq3)
+
+[![Oracle Cloud Infrastructure 2025 Certified Foundations
+Associate](https://github.com/user-attachments/assets/27a6991e-13f2-4479-8940-d7a2222673f5)](https://catalog-education.oracle.com/ords/certview/sharebadge?id=048F0DCA9846D6E18D3F09CE0CD4104D953BFB952FFBF4705F688C8ADDA65020)
+
+------------------------------------------------------------------------
+
+> 🚧 This repository is a living portfolio and evolves as new projects
+> are completed and new technologies are explored.
