@@ -61,30 +61,36 @@ browser execution.
 
 ------------------------------------------------------------------------
 
-## ☁️ OCI Infrastructure Pipeline --- CI/CD on Oracle Cloud Free Tier
+## ☁️ OCI Infrastructure Pipeline — Production K8s on Free Tier
 
 ### [OCI Infra Pipeline](https://github.com/A-Locke/n8n_kubernetes)
 
-A **GitHub Actions CI/CD pipeline** for deploying an **Oracle Cloud
-Infrastructure (OCI) Kubernetes cluster** on the Free Tier.
+A **fully automated GitHub Actions CI/CD pipeline** that provisions, configures, and tears down a **production-grade Kubernetes cluster on Oracle Cloud Free Tier** — $0/month vs $250+ on AWS EKS.
 
-Infrastructure deployed:
+**Infrastructure as Code stack:** Terraform (OKE cluster, VCN, compute, storage) + Ansible (VPN provisioning, DNS configuration) + Helm (application lifecycle).
 
--   OKE Kubernetes cluster
--   Helm-managed applications
--   WireGuard VPN for secure access
--   Cloudflare DNS automation
+**Security model:** All workloads are VPN-only. A WireGuard server on a free AMD instance acts as the sole ingress path for n8n, pgAdmin, and Grafana. TLS certificates are issued via cert-manager with Cloudflare DNS-01 challenge — no public exposure of services or challenge endpoints.
 
-Apps deployed:
+**Kubernetes hardening applied per workload:**
+- RBAC with least-privilege service accounts
+- NetworkPolicy (default-deny, explicit allow)
+- HPA with CPU autoscaling (metrics-server)
+- ResourceQuota + LimitRange per namespace
+- PodDisruptionBudget for n8n workers
 
--   Cert‑Manager
--   Ingress‑Nginx
--   PostgreSQL
--   pgAdmin
--   n8n
+**Applications deployed:**
 
-This project focuses on **secure infrastructure automation and
-cost‑efficient cloud architecture**.
+| App | Notes |
+|---|---|
+| n8n v2 | Queue mode — webhook listener + workers backed by Valkey |
+| PostgreSQL | StatefulSet with block volume persistence |
+| pgAdmin | Database management, VPN-only |
+| Prometheus + Grafana | kube-prometheus-stack, emptyDir (stays within Always Free storage cap) |
+| Cert-Manager + Ingress-Nginx | Wildcard TLS via Cloudflare DNS-01 |
+
+**AI tooling included:**
+- 5 Claude Code skills (`/k8s-status`, `/k8s-debug`, `/k8s-scale`, `/k8s-cost`, `/n8n-queue`) for conversational cluster ops
+- Claude Desktop Kubernetes MCP integration guide for natural-language cluster management
 
 ------------------------------------------------------------------------
 
