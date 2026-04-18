@@ -61,6 +61,35 @@ browser execution.
 
 ------------------------------------------------------------------------
 
+## 🔍 OpenAPI Contract Testing & AI Drift Detection
+
+### [SpecGuard — OpenAPI Contract Testing Platform](https://github.com/A-Locke/OpenAPI)
+
+A **contract-first OpenAPI testing platform** built as a TypeScript pnpm monorepo (9 packages/apps) — contract runner CLI, drift detection engine, AI semantic analyzer, MCP server, wrapper API, mock server, and shared packages.
+
+Wraps the **Apify TikTok Scraper** Actor: the internal OpenAPI spec is the product contract; the upstream spec is the vendor reference. The platform continuously validates the wrapper against both.
+
+**What it does:**
+
+- **Contract runner** executes HTTP requests against the live wrapper API, validates each response against the internal OpenAPI spec using AJV, and produces structured pass/fail/warn/error reports — distinguishing transport errors, upstream drift, wrapper violations, and assertion failures
+- **Drift engine** (`drift-core`) performs structural diff between the upstream Apify spec and the internal contract, surfacing breaking changes before they reach production
+- **AI semantic analysis** (`ai-drift-analyzer`) calls `claude-sonnet-4-6` with **prompt caching** — the static spec is pinned in cache, only the drift delta is sent per run — to produce severity classifications and remediation suggestions on top of raw structural diffs
+- **AI test generation** (`--ai-test-gen`) generates additional edge-case `TestCase` objects from the internal spec at runtime and merges them with spec-driven tests; breakdown logged per source
+- **MCP server** (4 tools) exposes raw spec content, drift reports, and test inputs for the host Claude to reason over — **no API key required**; tools are pure data providers
+
+**Verified results (CI artifact, 2026-04-18):**
+
+| Metric | Result |
+|---|---|
+| Unit tests | 24 / 24 passing |
+| Contract tests | 8 / 8 passing |
+| Contract violations | 0 |
+| CI pipeline | type-check → unit tests → Docker build → live contract run |
+
+**Stack:** TypeScript strict, Fastify, Zod (boundary parsing), AJV (OpenAPI schema validation), undici, Vitest, Docker multi-stage (`node:20-alpine`), GitHub Actions CI.
+
+------------------------------------------------------------------------
+
 ## ☁️ OCI Infrastructure Pipeline — Production K8s on Free Tier
 
 ### [OCI Infra Pipeline](https://github.com/A-Locke/n8n_kubernetes)
@@ -116,6 +145,8 @@ Features:
   ---------------------------------------------------------------------------------------------------------
   Skill / Topic                                  Project
   ---------------------------------------------- ----------------------------------------------------------
+  OpenAPI contract testing, drift detection, AI   [SpecGuard](https://github.com/A-Locke/OpenAPI)
+
   AWS EC2 n8n                                    [Deploy n8n to EC2 via Docker](./cloud/aws-n8n)
 
   AWS IAM, S3, Lambda                            [AWS n8n Add-Ons
