@@ -27,6 +27,31 @@ The goal is to build a portfolio that demonstrates:
 
 # 🌟 Featured Projects
 
+## ☸️ Kubernetes CKA Training Platform with AI Agent Solver
+
+### [kube-dojo — CKA Prep + AI Solver](https://github.com/A-Locke/kube-dojo)
+
+A **local Kubernetes training platform** for CKA exam preparation, with a built-in AI agent solver that thinks out loud at every step.
+
+Each task injects a **real broken Kubernetes state** into a local `kind` cluster — misconfigured Services, bad images, missing RBAC, stuck PVCs, scheduling taints — and verifies the fix deterministically.
+
+Modes:
+
+-   **Human mode** → read the prompt, diagnose and fix with `kubectl`
+-   **AI solver mode** → local Claude Code agent solves the task, explaining every command before running it and interpreting output after
+-   **Task generation** → `/generate-task` command designs, writes, and live-tests a complete new scenario from a one-line description
+
+Highlights:
+
+-   5/5 tasks solved autonomously by the local AI agent in a single suite run
+-   Deterministic `verify.sh` per task — no fuzzy grading, just pass or fail
+-   **Killercoda integration** — scenarios published to [`kube-dojo-scenarios`](https://github.com/A-Locke/kube-dojo-scenarios), playable in a browser with zero local setup
+-   Dual-backend architecture separating cluster provisioning from task logic
+
+Stack: `kind` · `kubectl` · Bash · Python · PowerShell · Claude Code
+
+------------------------------------------------------------------------
+
 ## 🤖 AI‑Augmented QA Automation
 
 ### [AI Agentic QA --- Playwright Planner → Generator → Healer](https://github.com/A-Locke/ai-agentic-qa-saucedemo)
